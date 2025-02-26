@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
