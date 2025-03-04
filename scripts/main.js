@@ -1,11 +1,16 @@
+const button = document.querySelector('.getNewGrid')
+const gridContainer = document.querySelector('.gridContainer')
+const userInput = prompt('How many squares per side?')
+
 function createGrid(x) {
-    const gridContainer = document.querySelector('.gridContainer')
+    
     
 
 for (let row = 0; row < x; row++) {
     for (let column = 0; column < x; column++) {
     const box = document.createElement('div');
-    if (row === column + 1)  {                 // Once i is equal to column variable, it will increase the width to 100% and flex wrap will wrap our boxes to the next line
+    box.classList.add('box')
+    if (row % column + 1 === 0)  {
         box.style.cssText = 'border: 0; height: 0; width: 100%;'
     } else {
         box.style.cssText = `border: 1px solid black; height: ${960/x}px; width: ${960/x}px;`
@@ -22,22 +27,17 @@ for (let row = 0; row < x; row++) {
 }
 
 }
-createGrid(prompt('How many squares?'))
+if (userInput < 3 || userInput > 100) {
+    alert('Try a more reasonable number')
+    window.location.reload()
+} else {
+    createGrid(userInput)
+}
 
-//Generate new grid button
+// Generate new grid
 
-// function newGrid() {
-//     const button = document.querySelector('.getNewGrid')
-//     const askUser = button.addEventListener('click', function() {
-//         prompt('How many squares per side?')   
-    
-
-//     if (askUser < 3 || askUser > 100) {
-//         alert('Try a more reasonable number')
-//     } else {
-//         createGrid(askUser)
-//     }
-// })
-// }
-// newGrid()
+const askUser = button.addEventListener('click', function() {
+    window.location.reload()
+    createGrid(userInput)
+})
 

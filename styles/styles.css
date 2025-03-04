@@ -5,4 +5,28 @@
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 960px;
+    width: 960px; 
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    background-color: #FFB22C;
+    border: black 1px solid;
+    border-radius: 3%;
+    height: 48px;
+}
+button:hover {
+    background-color: #D98324;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
 }
