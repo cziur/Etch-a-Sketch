@@ -1,7 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +23,8 @@ button {
     background-color: #FFB22C;
     border: black 1px solid;
     border-radius: 3%;
-    height: 48px;
+    height: 82px;
+    font-size: 62px;
 }
 button:hover {
     background-color: #D98324;
